@@ -1,25 +1,201 @@
-# Description
-This program is used for calculation of area or perimeter of some math objects.
+# Описание проекта 
+Проект представляет собой несколько файлов, предназначенных для работы с геометрическими фигурами, написанных на python и объединённых в одну библиотеку
 
-# How to use calculator:
-1. Run `python calculate.py`
-2. Enter the figure name. Available are Circle, Square, Triangle.
-3. Enter the function: Area or Perimeter.
-4. Enter figure sizes. Radius for circle, one side for square, and appropriate sides for triangle.
-5. Get the answer!
+## Описание файлов
+1. **circle.py** - функции для работы с кругами.
+2. **rectangle.py** - функции для работы с прямоугольниками.
+3. **square.py** - функции для работы с квадратами.
+4. **triangle.py** - функции для работы с треугольниками.
 
-# Math formulas
-## Area
-- Circle: `S = πR²`
-- Square: `S = a²`
-- Triangle: `S = (p * (p - a) * (p - b) * (p - c))**0.5` where p is semiperimeter
-- Rectangle: `S = a * b`
 
-## Perimeter
-- Circle: `P = 2πR`
-- Square: `P = 4a`
-- Triangle: `P = a + b + c`
-- Rectangle: `P = 2a + 2b`
+## Документация к модулям
+
+## circle.py
+
+Модуль для работы с кругами.
+
+### Функции
+
+### `area(r: double) -> double`
+
+Вычисляет площадь круга по заданному радиусу.
+
+**Параметры:**
+- `r` (double): радиус круга.
+
+**Возвращает:**
+- double: площадь круга.
+
+**Пример использования:**
+
+```python
+from circle import area
+
+result = area(5)
+print(result)  # Вывод: 78.53981633974483
+```
+
+### `perimeter(r: double) -> double`
+
+Вычисляет периметр (длину окружности) круга по заданному радиусу.
+
+**Параметры:**
+- `r` (double): радиус круга.
+
+**Возвращает:**
+- double: периметр круга.
+
+**Пример использования:**
+
+```python
+from circle import perimeter
+
+result = perimeter(5)
+print(result)  # Вывод: 31.41592653589793
+```
+
+---
+
+## rectangle.py
+
+Модуль для работы с прямоугольниками.
+
+### Функции
+
+### `area(a: double, b: double) -> double`
+
+Вычисляет площадь прямоугольника по заданной ширине и высоте.
+
+**Параметры:**
+- `a` (double): ширина прямоугольника.
+- `b` (double): высота прямоугольника.
+
+**Возвращает:**
+- double: площадь прямоугольника.
+
+**Пример использования:**
+
+```python
+from rectangle import area
+
+result = area(4, 5)
+print(result)  # Вывод: 20
+```
+
+### `perimeter(a: double, b: double) -> double`
+
+Вычисляет периметр прямоугольника по заданной ширине и высоте.
+
+**Параметры:**
+- `a` (double): ширина прямоугольника.
+- `b` (double): высота прямоугольника.
+
+**Возвращает:**
+- double: периметр прямоугольника.
+
+**Пример использования:**
+
+```python
+from rectangle import perimeter
+
+result = perimeter(4, 5)
+print(result)  # Вывод: 18
+```
+
+---
+
+## square.py
+
+Модуль для работы с квадратами.
+
+### Функции
+
+### `area(a: double) -> double`
+
+Вычисляет площадь квадрата по заданному радиусу.
+
+**Параметры:**
+- `a` (double): сторона квадрата.
+
+**Возвращает:**
+- double: площадь квадрата.
+
+**Пример использования:**
+
+```python
+from square import area
+
+result = area(4)
+print(result)  # Вывод: 16.0
+```
+
+### `perimeter(a: double) -> double`
+
+Вычисляет периметр квадрата по заданному радиусу.
+
+**Параметры:**
+- `a` (double): сторона квадрата.
+
+**Возвращает:**
+- double: периметр треугольника.
+
+**Пример использования:**
+
+```python
+from square import perimeter
+
+result = perimeter(5)
+print(result)  # Вывод: 20.0
+```
+
+---
+
+## triangle.py
+
+Модуль для работы с треугольниками.
+
+### Функции
+
+### `area(a: double, h: double) -> double`
+
+Вычисляет площадь треугольника по заданному радиусу.
+
+**Параметры:**
+- `a` (double): сторона треугольника.
+-  `h` (double): высота треугольника.
+
+**Возвращает:**
+- double: площадь треугольника.
+
+**Пример использования:**
+
+```python
+from circle import area
+
+result = area(5, 10)
+print(result)  # Вывод: 25.0
+```
+
+### `perimeter(a: double, b: double, c: double) -> double`
+
+Вычисляет периметр треугольника по заданному радиусу.
+
+**Параметры:**
+- `a` (double): первая сторона треугольника.
+-  `b` (double): вторая сторона треугольника.
+-  `b` (double): вторая сторона треугольника.
+
+**Возвращает:**
+- double: периметр треугольника.
+
+**Пример использования:**
+
+```python
+from triangle import perimeter
+
+result = perimeter(2, 3, 4)
+print(result)  # Вывод: 9.0
+```
 
 # Last commits
 - ```Thu Mar 4 14:55:29 2021 +0300, commit d078c8d9ee6155f3cb```

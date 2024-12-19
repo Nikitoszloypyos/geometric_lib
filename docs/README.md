@@ -1,21 +1,184 @@
+# Описание проекта 
+Проект представляет собой несколько файлов, предназначенных для работы с геометрическими фигурами, написанных на python и объединённых в одну библиотеку
 
-# How to use calculator:
-1. Run `python calculate.py`
-2. Enter the figure name. Available are Circle, Square.
-3. Enter the function: Area or Perimeter.
-4. Enter figure sizes. Radius for circle, one side for square.
-5. Get the answer!
+## Описание файлов
+1. **circle.py** - функции для работы с кругами.
+2. **square.py** - функции для работы с квадратами.
+3. **triangle.py** - функции для работы с треугольниками.
+4. **calculate.py** - функции для работы с геометрическими фигурами.
 
-# Math formulas
-## Area
-- Circle: `S = πR²`
-- Rectangle: `S = ab`
-- Square: `S = a²`
-- Triangle: `S = sqrt(p * (p-a) * (p-b) * (p-c))` where p is semiperimeter
 
-## Perimeter
-- Circle: `P = 2πR`
-- Rectangle: `P = 2a + 2b`
-- Square: `P = 4a`
-- Triangle: `P = a + b + c`
+## Документация к модулям
 
+## 1. circle.py
+
+Модуль для работы с кругами.
+
+### Функции
+
+### `area(r: double) -> double`
+
+Вычисляет площадь круга по заданному радиусу.
+
+**Параметры:**
+- `r` (double): радиус круга.
+
+**Возвращает:**
+- double: площадь круга.
+
+**Пример использования:**
+
+```python
+from circle import area
+
+result = area(5)
+print(result)  # Вывод: 78.53981633974483
+```
+
+### `perimeter(r: double) -> double`
+
+Вычисляет периметр (длину окружности) круга по заданному радиусу.
+
+**Параметры:**
+- `r` (double): радиус круга.
+
+**Возвращает:**
+- double: периметр круга.
+
+**Пример использования:**
+
+```python
+from circle import perimeter
+
+result = perimeter(5)
+print(result)  # Вывод: 31.41592653589793
+```
+
+---
+
+## 2. square.py
+
+Модуль для работы с квадратами.
+
+### Функции
+
+### `area(a: double) -> double`
+
+Вычисляет площадь квадрата по заданному радиусу.
+
+**Параметры:**
+- `a` (double): сторона квадрата.
+
+**Возвращает:**
+- double: площадь квадрата.
+
+**Пример использования:**
+
+```python
+from square import area
+
+result = area(4)
+print(result)  # Вывод: 16.0
+```
+
+### `perimeter(a: double) -> double`
+
+Вычисляет периметр квадрата по заданному радиусу.
+
+**Параметры:**
+- `a` (double): сторона квадрата.
+
+**Возвращает:**
+- double: периметр треугольника.
+
+**Пример использования:**
+
+```python
+from square import perimeter
+
+result = perimeter(5)
+print(result)  # Вывод: 20.0
+```
+
+---
+
+## 3. triangle.py
+
+Модуль для работы с треугольниками.
+
+### Функции
+
+### `area(a: double, h: double) -> double`
+
+Вычисляет площадь треугольника по заданному радиусу.
+
+**Параметры:**
+- `a` (double): сторона треугольника.
+-  `h` (double): высота треугольника.
+
+**Возвращает:**
+- double: площадь треугольника.
+
+**Пример использования:**
+
+```python
+from circle import area
+
+result = area(5, 10)
+print(result)  # Вывод: 25.0
+```
+
+### `perimeter(a: double, b: double, c: double) -> double`
+
+Вычисляет периметр треугольника по заданному радиусу.
+
+**Параметры:**
+- `a` (double): первая сторона треугольника.
+-  `b` (double): вторая сторона треугольника.
+-  `b` (double): вторая сторона треугольника.
+
+**Возвращает:**
+- double: периметр треугольника.
+
+**Пример использования:**
+
+```python
+from triangle import perimeter
+
+result = perimeter(2, 3, 4)
+print(result)  # Вывод: 9.0
+```
+---
+
+## 4. calculate.py
+
+Модуль для работы с геометрическими фигурами. В данный момент поддерживаются круги и квадраты.
+
+## Функции
+
+### `calc(fig: str, func: str, size: list) -> None`
+
+Вычисляет заданную характеристику (площадь или периметр) указанной фигуры на основе полученных размеров.
+
+**Параметры:**
+- `fig` (str): название фигуры (доступные значения — 'circle' и 'square').
+- `func` (str): название функции (доступные значения — 'perimeter' и 'area').
+- `size` (list): размеры фигуры, передаваемые в функцию.
+
+**Возвращает:**
+- None: функция просто выводит результат вычисления в консоль.
+
+**Пример использования:**
+```python
+# В коде ниже вы вызываете функции для вычисления площади или периметра
+
+from geometry_calculator import calc
+
+calc('circle', 'area', [5])  # Вычисляет площадь круга с радиусом 5
+calc('square', 'perimeter', [4])  # Вычисляет периметр квадрата со стороной 4
+```
+
+---
+# Last commits
+- ```Thu Mar 4 14:55:29 2021 +0300, commit d078c8d9ee6155f3cb```
+- ```Thu Mar 4 14:54:08 2021 +0300, commit 8ba9aeb3cea847b63a```
